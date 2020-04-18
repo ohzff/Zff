@@ -8,5 +8,7 @@ git clone https://github.com/langong-dev/Zff.git
 # Run
 
 ```bash
-./Zff
+./zff
 ```
+
+Feedback: ```langonginc@yeah.net```
