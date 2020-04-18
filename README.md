@@ -1,3 +1,5 @@
+[中文？点击切换](/README-CH.md)
+
 # Install
 
 ```bash
