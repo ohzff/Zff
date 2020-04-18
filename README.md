@@ -8,7 +8,11 @@ git clone https://github.com/langong-dev/Zff.git
 # Run
 
 ```bash
-./zff
+# English
+./zff-en
+
+# Chinese
+./zff-ch
 ```
 
 Feedback: ```langonginc@yeah.net```
