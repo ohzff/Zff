@@ -392,7 +392,6 @@ void goodbye(){
 	printf("\n           再见！\n\n\n\n\n           LanGongINC\n           LanGongDEV\n");
 }
 int main(){
-	// initscr();
 	if(start()){
 		printf("--------ERR3: start error--------\n");
 		return -3;
@@ -400,6 +399,6 @@ int main(){
 	}
 	sleep(1);
 	findpalse();
-	// endwin();
+	goodbye();
 	return 0;
 }
