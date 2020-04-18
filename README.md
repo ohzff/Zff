@@ -9,10 +9,10 @@ git clone https://github.com/langong-dev/Zff.git
 
 ```bash
 # English
-./zff-en
+cd ~/Zff && ./zff-en
 
 # Chinese
-./zff-ch
+cd ~/Zff && ./zff-ch
 ```
 
 Feedback: ```langonginc@yeah.net```
