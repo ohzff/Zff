@@ -388,6 +388,7 @@ void findpalse(){
 //This is for not pause
 
 void goodbye(){
+	system("clear");
 	printf("\n           Goodbye!\n\n\n\n\n           LanGongINC\n           LanGongDEV\n");
 }
 int main(){
