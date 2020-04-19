@@ -391,6 +391,8 @@ void findpalse(){
 void goodbye(){
 	system("clear");
 	printf("\n           再见！\n\n\n\n\n           LanGongINC\n           LanGongDEV\n");
+	sleep(1);
+	system("clear");
 }
 int main(){
 	if(start()){
