@@ -1,3 +1,15 @@
+# 撞FuFu
+
+运行环境：
+
+- [] Windows
+- [x] Linux
+- - [x] ARM
+- - [x] X86_64
+- [x] MacOS
+- - [x] X86_64
+
+
 # 下载
 
 ## X86_64-Linux

@@ -1,4 +1,15 @@
+# Zff
+
 [中文？点击切换](/README-CH.md)
+
+Run in：
+
+- [] Windows
+- [x] Linux
+- - [x] ARM
+- - [x] X86_64
+- [x] MacOS
+- - [x] X86_64
 
 # Install
 
