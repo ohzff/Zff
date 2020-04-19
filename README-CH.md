@@ -2,7 +2,7 @@
 
 运行环境：
 
-- [] Windows
+- [ ] Windows
 - [x] Linux
 - - [x] ARM
 - - [x] X86_64

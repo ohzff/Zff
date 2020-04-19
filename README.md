@@ -4,7 +4,7 @@
 
 Run in：
 
-- [] Windows
+- [ ] Windows
 - [x] Linux
 - - [x] ARM
 - - [x] X86_64
