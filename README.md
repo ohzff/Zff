@@ -2,11 +2,21 @@
 
 # Install
 
-## In X86_64
+## In X86_64-Linux
 
 ```bash
 # Git Clone
 git clone https://github.com/langong-dev/Zff.git
+```
+
+## In MacOS
+
+```bash
+# Git Clone
+git clone https://github.com/langong-dev/Zff.git
+
+# Compile
+g++ zff_main_en.cpp -o zff-en && git zff_main_ch.cpp -o zff-ch
 ```
 
 ## In ARM
