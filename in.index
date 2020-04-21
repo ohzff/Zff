@@ -1,0 +1,10 @@
+fun(){
+echo "input number."
+echo "1) English   2) Chinese"
+read tp
+if [[ "$tp" == "1" ]]; then
+	./zff-en
+else
+	./zff-ch
+fi
+}
