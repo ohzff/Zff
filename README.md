@@ -13,18 +13,18 @@ Run in：
 
 # Install
 
+Please install this first: [LanFilePackage](https://github.com/langong-dev/LanFilePackage)
+
 ## In X86_64-Linux
 
 ```bash
-# Git Clone
-git clone https://github.com/langong-dev/Zff.git
+./LanGong install github langong-dev/Zff
 ```
 
 ## In MacOS
 
 ```bash
-# Git Clone
-git clone https://github.com/langong-dev/Zff.git
+./LanGong install github langong-dev/Zff
 
 # Compile
 g++ zff_main_en.cpp -o zff-en && git zff_main_ch.cpp -o zff-ch
@@ -33,8 +33,7 @@ g++ zff_main_en.cpp -o zff-en && git zff_main_ch.cpp -o zff-ch
 ## In ARM
 
 ```bash
-# Git Clone
-git clone https://github.com/langong-dev/Zff.git
+./LanGong install github langong-dev/Zff
 
 # Compile
 g++ zff_main_en.cpp -o zff-en && git zff_main_ch.cpp -o zff-ch
@@ -43,11 +42,7 @@ g++ zff_main_en.cpp -o zff-en && git zff_main_ch.cpp -o zff-ch
 # Run
 
 ```bash
-# English
-cd ~/Zff && ./zff-en
-
-# Chinese
-cd ~/Zff && ./zff-ch
+./LanGong run Zff
 ```
 
 Feedback: ```langonginc@yeah.net```
