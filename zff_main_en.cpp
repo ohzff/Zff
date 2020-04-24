@@ -171,7 +171,7 @@ int start(){
 	printf("Welcome\n");
 	level=getlevel();
 	system("clear");
-	printf("                Zff \n\n\n\n\n\n\n\n\n\n                 Welcome!\n");
+	printf("                Zff \n\n\n\n\n\n\n\n\n\n         Welcome!\n");
 	sleep(3);
 	if(level==-1||getboot()!=1){
 		maken();
@@ -181,7 +181,7 @@ int start(){
 	level=getlevel();
 	name=getuser();
 	cout<<name<<endl;
-	printf("             Your level%d\n\n\n\n",level);
+	printf("             Your level is: %d\n\n\n\n",level);
 	sleep(2);
 	if(level==-1){
 		return 1;
@@ -194,7 +194,7 @@ int game(){
 		if(fx==hx&&fy==hy){
 			putlevel(level+1);
 			system("clear");
-			printf("Congratulations! Your level：%d\nPlay continue? [continue : Enter / quit : q ]\n",level+1);
+			printf("Congratulations! Your level is: %d\nPlay continue? [continue : Enter / quit : q ]\n",level+1);
 			while(1){
 				int r=check(keyboard());
 				if(r==9)return 0;
@@ -250,7 +250,7 @@ int game(){
 			if(field[hx+nx[r]][hy+ny[r]]==6){
 				putlevel(level+1);
 				syscls();
-				printf("Congratulations! Your level：%d\nPlay continue? [continue : Enter / quit : q ]\n",level+1);
+				printf("Congratulations! Your level is: %d\nPlay continue? [continue : Enter / quit : q ]\n",level+1);
 				int r=check(keyboard());
 				while(1){
 					int r=check(keyboard());
