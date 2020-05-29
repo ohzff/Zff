@@ -5,11 +5,15 @@
 Run in：
 
 - [ ] [Windows(Click to Windows)](https://github.com/langong-dev/Zff-Win/)
+  - [ ] Win7
+  - [ ] Win8
+  - [ ] Win10
 - [x] Linux
-- - [x] ARM
-- - [x] X86_64
+  - [x] ARM
+  - [x] X86
+  - [x] X64
+  - [ ] X32
 - [x] MacOS
-- - [x] X86_64
 
 # Install
 
