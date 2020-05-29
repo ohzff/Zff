@@ -4,10 +4,26 @@
 
 Run in：
 
-- [ ] [Windows(Click to Windows)](https://github.com/langong-dev/Zff-Win/)
+- [ ] [Microsofts (Click to Windows)](https://github.com/langong-dev/Zff-Win.git)
+  - [ ] Win1.0
+  - [ ] Win2.0
+  - [ ] Win2.x
+  - [ ] MS-DOS
+  - [ ] Win3.x
+  - [ ] Win-CE
+  - [ ] Win-NT
+  - [ ] Win-XP
+  - [ ] Win-Mobile
+  - [ ] Win-Server2003
+  - [ ] Win-Server2008
+  - [ ] Win-Server2012
+  - [ ] Win-Vista
   - [ ] Win7
   - [ ] Win8
+  - [ ] Win8.1
   - [ ] Win10
+  - [ ] Xbox
+  - [ ] Win-ME
 - [x] Linux
   - [x] ARM
   - [x] X86
