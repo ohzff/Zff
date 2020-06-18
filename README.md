@@ -43,12 +43,17 @@ Please install this first: [LanFilePackage](https://github.com/langong-dev/LanFi
 
 ```bash
 git clone https://github.com/langong-dev/Zff
+bash install.sh
 ```
 
 # Run
 
 ```bash
+# For LanFilePackage
 ./LanGong run Zff
+
+# For Git
+./zff
 ```
 
 Feedback: ```langonginc@yeah.net```
