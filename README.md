@@ -1,7 +1,5 @@
 # Zff
 
-[中文？点击切换](/README-CH.md)
-
 Run in：
 
 - [ ] [Microsofts (Click to Windows)](https://github.com/langong-dev/Zff-Win.git)
@@ -33,10 +31,18 @@ Run in：
 
 # Install
 
+## Install From LanFilePackage
+
 Please install this first: [LanFilePackage](https://github.com/langong-dev/LanFilePackage)
 
 ```bash
 ./LanGong install github langong-dev/Zff
+```
+
+## Install From Git
+
+```bash
+git clone https://github.com/langong-dev/Zff
 ```
 
 # Run
