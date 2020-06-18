@@ -60,4 +60,16 @@ bash install.sh
 ./zff
 ```
 
-Feedback: ```langonginc@yeah.net```
+# Update
+
+```bash
+# LanFilePackage
+cd ~/LanGongFile/Zff && git pull
+
+# Git
+cd Zff && git pull
+```
+
+# Feedback: 
+
+```langonginc@yeah.net```
