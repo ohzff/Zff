@@ -1,6 +1,10 @@
 # Zff
 
-Run in：
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/langong-dev/Zff?logo=Github)
+![GitHub repo size](https://img.shields.io/github/repo-size/langong-dev/Zff)
+![GitHub top language](https://img.shields.io/github/languages/top/langong-dev/Zff)
+
+## Run in：
 
 - [ ] [Microsofts (Click to Windows)](https://github.com/langong-dev/Zff-Win.git)
   - [ ] Win1.0
