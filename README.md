@@ -40,7 +40,7 @@
 Please install this first: [LanFilePackage](https://github.com/langong-dev/LanFilePackage)
 
 ```bash
-lfp install github ohzff/Zff
+lfp install zff Zff
 ```
 
 ## Install From Git
