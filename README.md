@@ -40,13 +40,13 @@
 Please install this first: [LanFilePackage](https://github.com/langong-dev/LanFilePackage)
 
 ```bash
-./LanGong install github langong-dev/Zff
+lfp install github ohzff/Zff
 ```
 
 ## Install From Git
 
 ```bash
-git clone https://github.com/langong-dev/Zff
+git clone https://github.com/ohzff/Zff
 bash install.sh
 ```
 
@@ -54,7 +54,7 @@ bash install.sh
 
 ```bash
 # For LanFilePackage
-./LanGong run Zff
+lfp run Zff
 
 # For Git
 ./zff
