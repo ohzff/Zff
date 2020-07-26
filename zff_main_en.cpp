@@ -184,7 +184,9 @@ int start(){
 	//printf("                Zff \n\n\n\n\n\n\n\n\n\n         Welcome!\n");
 	//sleep(3);
 	if(level==-1||getboot()!=1){
-		maken();
+		//maken();
+    printf ("------Err5: User not found! ------\n >> Input 'zff init' to add user\n");
+    exit (-5);
 	}
 	system("clear");
 	level=getlevel();

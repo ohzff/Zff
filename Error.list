@@ -1,4 +1,5 @@
-ERR1 : Outside出界 
-ERR2 : DownloadError下载错误 
-ERR3 : StartRunError启动运行错误
-ERR4 : InputError输入错误 
+ERR1 : Outside 出界 
+ERR2 : DownloadError 下载错误 
+ERR3 : StartRunError 启动运行错误
+ERR4 : InputError 输入错误 
+ERR5 : UserNotFound 用户未找到 
