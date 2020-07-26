@@ -2,10 +2,24 @@
 #include<iostream>
 #include<cstring>
 using namespace std;
+char* getchuser()
+{
+  char* a;
+	fstream file;
+	file.open("zffcc/user", ios::in);
+	streambuf* stream_buffer_cout = cout.rdbuf();
+	streambuf* stream_buffer_cin = cin.rdbuf();
+	streambuf* stream_buffer_file = file.rdbuf();
+	cin.rdbuf(stream_buffer_file);
+  cin >> a;
+	cin.rdbuf(stream_buffer_cin);
+	file.close();
+  return a;
+}
 int getlevel(){
 	int typeU;
 	fstream file;
-	file.open("level.dll", ios::in);
+	file.open("zffcc/level", ios::in);
 	streambuf* stream_buffer_cout = cout.rdbuf();
 	streambuf* stream_buffer_cin = cin.rdbuf();
 	streambuf* stream_buffer_file = file.rdbuf();
@@ -17,7 +31,7 @@ int getlevel(){
 }
 void putlevel(int n){
 	fstream file;
-	file.open("level.dll", ios::out);
+	file.open("zffcc/level", ios::out);
 	streambuf* stream_buffer_cout = cout.rdbuf();
 	streambuf* stream_buffer_cin = cin.rdbuf();
 	streambuf* stream_buffer_file = file.rdbuf();
@@ -30,7 +44,7 @@ void putlevel(int n){
 int getboot(){
 	int typeU;
 	fstream file;
-	file.open("boot.dll", ios::in);
+	file.open("zffcc/boot", ios::in);
 	streambuf* stream_buffer_cout = cout.rdbuf();
 	streambuf* stream_buffer_cin = cin.rdbuf();
 	streambuf* stream_buffer_file = file.rdbuf();
@@ -42,7 +56,7 @@ int getboot(){
 }
 void putboot(int n){
 	fstream file;
-	file.open("boot.dll", ios::out);
+	file.open("zffcc/boot", ios::out);
 	streambuf* stream_buffer_cout = cout.rdbuf();
 	streambuf* stream_buffer_cin = cin.rdbuf();
 	streambuf* stream_buffer_file = file.rdbuf();
@@ -55,7 +69,7 @@ void putboot(int n){
 string getuser(){
 	string typeU;
 	fstream file;
-	file.open("user.dll", ios::in);
+	file.open("zffcc/user", ios::in);
 	streambuf* stream_buffer_cout = cout.rdbuf();
 	streambuf* stream_buffer_cin = cin.rdbuf();
 	streambuf* stream_buffer_file = file.rdbuf();
@@ -67,7 +81,7 @@ string getuser(){
 }
 void putuser(string n){
 	fstream file;
-	file.open("user.dll", ios::out);
+	file.open("zffcc/user", ios::out);
 	streambuf* stream_buffer_cout = cout.rdbuf();
 	streambuf* stream_buffer_cin = cin.rdbuf();
 	streambuf* stream_buffer_file = file.rdbuf();

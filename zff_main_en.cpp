@@ -165,23 +165,28 @@ void maken(){
 int start(){
 	// system("color F0");
 	system("clear");
+  system ("cp -r ~/.local/share/ohzff-zff ./zffcc");
+  /*
 	printf("\n\n\n              LanGongINC \n              LanGongDEV \n");
 	sleep(3);
 	system("clear");
 	printf("Welcome\n");
-	level=getlevel();
-	system("clear");
-	printf("                Zff \n\n\n\n\n\n\n\n\n\n         Welcome!\n");
-	sleep(3);
+	*/
+  printf (" >> Starting Zff Game...\n");
+  //printf (" >> Copy config files\n");
+  //system ("cp ")
+  level=getlevel();
+	//system("clear");
+	//printf("                Zff \n\n\n\n\n\n\n\n\n\n         Welcome!\n");
+	//sleep(3);
 	if(level==-1||getboot()!=1){
 		maken();
 	}
 	system("clear");
-	printf("              Welcome ");
 	level=getlevel();
 	name=getuser();
-	cout<<name<<endl;
-	printf("             Your level is: %d\n\n\n\n",level);
+	cout<<" Welcome "<<name<<endl;
+	printf(" Your level is: %d\n\n\n\n",level);
 	sleep(2);
 	if(level==-1){
 		return 1;
@@ -389,10 +394,14 @@ void findpalse(){
 
 void goodbye(){
 	system("clear");
-	printf("\n           Goodbye!\n\n\n\n\n           LanGongINC\n           LanGongDEV\n");
-	sleep(1);
+	//printf("\n           Goodbye!\n\n\n\n\n           LanGongINC\n           LanGongDEV\n");
+	printf (" >> Exit\n");
+  printf ("   -> Copy config files\n");
+  system ("rm -rf ~/.local/share/ohzff-zff && mv zffcc ~/.local/share/ohzff-zff");
+  sleep(1);
 	system("clear");
 }
+
 int main(){
 	if(start()){
 		printf("--------ERR3: Start Error--------\n");
