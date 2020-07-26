@@ -2,24 +2,38 @@
 #include<iostream>
 #include<cstring>
 using namespace std;
-char* getchuser()
-{
-  char* a;
+
+char dir[1000]; 
+char lev[1000], bot[1000], usr[1000];
+void getdir(){
+	//int typeU;
 	fstream file;
-	file.open("zffcc/user", ios::in);
+	file.open("/tmp/zffuser", ios::in);
 	streambuf* stream_buffer_cout = cout.rdbuf();
 	streambuf* stream_buffer_cin = cin.rdbuf();
 	streambuf* stream_buffer_file = file.rdbuf();
 	cin.rdbuf(stream_buffer_file);
-  cin >> a;
+	cin>>dir;
 	cin.rdbuf(stream_buffer_cin);
 	file.close();
-  return a;
+	//return typeU;
+  cout << dir;
+}
+void getinit()
+{
+  //strcat(dir, gshell("echo $HOME/.local/share/ohzff-zff/"));
+  strcat(dir, "/.local/share/ohzff-zff/");
+  strcpy(lev,dir);
+  strcpy(bot,dir);
+  strcpy(usr,dir);
+  strcat(lev,"level");
+  strcat(bot,"boot");
+  strcat(usr,"user");
 }
 int getlevel(){
 	int typeU;
 	fstream file;
-	file.open("zffcc/level", ios::in);
+	file.open(lev, ios::in);
 	streambuf* stream_buffer_cout = cout.rdbuf();
 	streambuf* stream_buffer_cin = cin.rdbuf();
 	streambuf* stream_buffer_file = file.rdbuf();
@@ -31,7 +45,7 @@ int getlevel(){
 }
 void putlevel(int n){
 	fstream file;
-	file.open("zffcc/level", ios::out);
+	file.open(lev, ios::out);
 	streambuf* stream_buffer_cout = cout.rdbuf();
 	streambuf* stream_buffer_cin = cin.rdbuf();
 	streambuf* stream_buffer_file = file.rdbuf();
@@ -44,7 +58,7 @@ void putlevel(int n){
 int getboot(){
 	int typeU;
 	fstream file;
-	file.open("zffcc/boot", ios::in);
+	file.open(bot, ios::in);
 	streambuf* stream_buffer_cout = cout.rdbuf();
 	streambuf* stream_buffer_cin = cin.rdbuf();
 	streambuf* stream_buffer_file = file.rdbuf();
@@ -56,7 +70,7 @@ int getboot(){
 }
 void putboot(int n){
 	fstream file;
-	file.open("zffcc/boot", ios::out);
+	file.open(bot, ios::out);
 	streambuf* stream_buffer_cout = cout.rdbuf();
 	streambuf* stream_buffer_cin = cin.rdbuf();
 	streambuf* stream_buffer_file = file.rdbuf();
@@ -69,7 +83,7 @@ void putboot(int n){
 string getuser(){
 	string typeU;
 	fstream file;
-	file.open("zffcc/user", ios::in);
+	file.open(usr, ios::in);
 	streambuf* stream_buffer_cout = cout.rdbuf();
 	streambuf* stream_buffer_cin = cin.rdbuf();
 	streambuf* stream_buffer_file = file.rdbuf();
@@ -81,7 +95,7 @@ string getuser(){
 }
 void putuser(string n){
 	fstream file;
-	file.open("zffcc/user", ios::out);
+	file.open(usr, ios::out);
 	streambuf* stream_buffer_cout = cout.rdbuf();
 	streambuf* stream_buffer_cin = cin.rdbuf();
 	streambuf* stream_buffer_file = file.rdbuf();

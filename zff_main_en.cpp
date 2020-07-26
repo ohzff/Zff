@@ -7,7 +7,7 @@ Copyright 2020 LanGongINC
 #include<cstdio>
 #include<cstdlib>
 #include<queue>
-#include"get.cpp"
+
 // #include"rand.cpp"
 #include<curses.h>
 #include <unistd.h>
@@ -18,6 +18,8 @@ Copyright 2020 LanGongINC
 // #include <fcntl.h>
 #include "getkeyboard.cpp"
 using namespace std;
+#include "getshell.hpp"
+#include"get.cpp"
 typedef const int ci;
 typedef const char cc;
 typedef const double cd;
@@ -164,8 +166,10 @@ void maken(){
 }
 int start(){
 	// system("color F0");
-	system("clear");
-  system ("cp -r ~/.local/share/ohzff-zff ./zffcc");
+	system("echo $HOME > /tmp/zffuser; clear");
+  //system ("cp -r ~/.local/share/ohzff-zff ./zffcc");
+  getdir();
+  getinit();
   /*
 	printf("\n\n\n              LanGongINC \n              LanGongDEV \n");
 	sleep(3);
@@ -397,7 +401,7 @@ void goodbye(){
 	//printf("\n           Goodbye!\n\n\n\n\n           LanGongINC\n           LanGongDEV\n");
 	printf (" >> Exit\n");
   printf ("   -> Copy config files\n");
-  system ("rm -rf ~/.local/share/ohzff-zff && mv zffcc ~/.local/share/ohzff-zff");
+  //system ("rm -rf ~/.local/share/ohzff-zff && mv zffcc ~/.local/share/ohzff-zff");
   sleep(1);
 	system("clear");
 }
