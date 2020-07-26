@@ -19,7 +19,8 @@ Copyright 2020 LanGongINC
 #include "getkeyboard.cpp"
 using namespace std;
 #include "getshell.hpp"
-#include"get.cpp"
+#include "get.cpp"
+#include "type.cpp"
 typedef const int ci;
 typedef const char cc;
 typedef const double cd;
