@@ -35,16 +35,6 @@
 
 # Install
 
-## Install From LanFilePackage
-
-Please install this first: [LanFilePackage](https://github.com/langong-dev/LanFilePackage)
-
-```bash
-lfp install zff Zff
-```
-
-## Install From Git
-
 ```bash
 git clone https://github.com/ohzff/Zff
 bash install.sh
@@ -53,20 +43,12 @@ bash install.sh
 # Run
 
 ```bash
-# For LanFilePackage
-lfp run Zff
-
-# For Git
-./zff
+zff
 ```
 
 # Update
 
 ```bash
-# LanFilePackage
-cd ~/LanGongFile/Zff && git pull
-
-# Git
 cd Zff && git pull
 ```
 
