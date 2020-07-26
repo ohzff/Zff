@@ -37,6 +37,7 @@
 
 ```bash
 git clone https://github.com/ohzff/Zff
+cd Zff
 bash install.sh
 ```
 
@@ -55,7 +56,7 @@ zff
 # Update
 
 ```bash
-wget https://cdn.jsdelivr.net/gh/ohzff/Zff@*/zff -O /usr/bin/zff
+zff update
 ```
 
 # Feedback: 
