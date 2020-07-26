@@ -20,17 +20,13 @@
 yaourt -S zff  ## you can also use other app, like yay, pacaur...
 ```
 
-## Normal user
+## Others
 
 ```bash
 git clone https://github.com/ohzff/Zff
 cd Zff
 sudo bash install.sh
 ```
-
-If you want to try the Beta versions, you can use `git checkout beta` when you install the game. You can also reinstall it.
-
-If you are using normal versions, you can use `git checkout master` when you install the game. You can also reinstall it.
 
 # Add user
 
@@ -47,10 +43,17 @@ zff
 # Update
 
 ```bash
-zff update  ## Normal user
-yaourt -Syu ## Aur user;  you can also use other app, like yay, pacaur...
+cd /usr/share/ohzff-zff
+sudo git pull
+sudo g++ zff_main_en.cpp -o /usr/bin/zff
+```
+
+Aur users
+
+```bash
+yaourt -Syu
 ```
 
 # Feedback: 
 
-```langonginc@yeah.net```
+Issues
