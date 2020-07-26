@@ -406,12 +406,25 @@ void goodbye(){
 	system("clear");
 }
 
-int main(){
-	if(start()){
-		printf("--------ERR3: Start Error--------\n");
-		return -3;
-		exit(-3);
-	}
+int main(int argc, char* argv[]){
+  if(argv[1] == NULL)
+  {
+    if(start()){
+      printf("--------ERR3: Start Error--------\n");
+      return -3;
+      exit(-3);
+    }
+  }
+	else if (strcmp(argv[1], "init") == 0)
+  {
+    system ("bash /usr/share/ohzff-zff/init.sh");
+    return 0;
+  }
+  else if (strcmp(argv[1], "update") == 0)
+  {
+    system ("cd /usr/share/ohzff-zff && git pull && g++ zff_main_en.cpp -o /usr/bin/zff");
+    return 0;
+  }
 	sleep(1);
 	findpalse();
 	goodbye();
