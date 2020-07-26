@@ -1,1 +1,1 @@
-#define git 1
+#define aur 1
