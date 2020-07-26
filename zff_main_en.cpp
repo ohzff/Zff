@@ -206,7 +206,7 @@ int game(){
 		if(fx==hx&&fy==hy){
 			putlevel(level+1);
 			system("clear");
-			printf("Congratulations! Your level is: %d\nPlay continue? [continue : Enter / quit : q ]\n",level+1);
+			printf("Congratulations! Your new level is: %d\nPlay again? [Again : Enter / quit : q ]\n",level+1);
 			while(1){
 				int r=check(keyboard());
 				if(r==9)return 0;
@@ -230,7 +230,7 @@ int game(){
 			}
 			cout<<endl;
 		}
-		printf("\nPlease press Azimuth key to control People H, \nPress 'R' to reboot,\nPress 'Q' to quit game\n");
+		printf("\nUse 'UP''DOWN''LEFT''RIGHT' to contral 'H' to catch 'F'\nPress 'R' to restart game,\nPress 'Q' to quit game\n");
 		int r=check(keyboard());
 		// printf("%d\n",r);
 		// sleep(1);
@@ -262,7 +262,7 @@ int game(){
 			if(field[hx+nx[r]][hy+ny[r]]==6){
 				putlevel(level+1);
 				syscls();
-				printf("Congratulations! Your level is: %d\nPlay continue? [continue : Enter / quit : q ]\n",level+1);
+				printf("Congratulations! Your new level is: %d\nPlay again? [Again : Enter / quit : q ]\n",level+1);
 				int r=check(keyboard());
 				while(1){
 					int r=check(keyboard());
@@ -401,9 +401,7 @@ void findpalse(){
 
 void goodbye(){
 	system("clear");
-	//printf("\n           Goodbye!\n\n\n\n\n           LanGongINC\n           LanGongDEV\n");
 	printf (" >> Exit\n");
-  printf ("   -> Copy config files\n");
   //system ("rm -rf ~/.local/share/ohzff-zff && mv zffcc ~/.local/share/ohzff-zff");
   sleep(1);
 	system("clear");
@@ -425,8 +423,14 @@ int main(int argc, char* argv[]){
   }
   else if (strcmp(argv[1], "update") == 0)
   {
-    system ("cd /usr/share/ohzff-zff && git pull && g++ zff_main_en.cpp -o /usr/bin/zff");
+    //system ("cd /usr/share/ohzff-zff && git pull && g++ zff_main_en.cpp -o /usr/bin/zff");
+    printf (" >> You cannot use this via to update the game. Try to use git\n");
     return 0;
+  }
+  else
+  {
+    printf ("------ERR4: Input Error, Please Input again! ------\n");
+    return -4;
   }
 	sleep(1);
 	findpalse();
