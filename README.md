@@ -40,6 +40,12 @@ git clone https://github.com/ohzff/Zff
 bash install.sh
 ```
 
+# Add user
+
+```bash
+zff init
+```
+
 # Run
 
 ```bash
@@ -49,7 +55,7 @@ zff
 # Update
 
 ```bash
-cd Zff && git pull
+wget https://cdn.jsdelivr.net/gh/ohzff/Zff@*/zff -O /usr/bin/zff
 ```
 
 # Feedback: 
