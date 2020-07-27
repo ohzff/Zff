@@ -4,15 +4,15 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/langong-dev/Zff)
 ![GitHub top language](https://img.shields.io/github/languages/top/langong-dev/Zff)
 
-## Run in：
+## Run in 运行于
 
-- [ ] [Microsofts (Click to Windows)](https://github.com/langong-dev/Zff-Win.git)
-  - None
+- [ ] [Microsofts Windows (Click to Windows)](https://github.com/langong-dev/Zff-Win.git)
+  - None 均不可用
 - [x] Linux
-  - All
+  - All 全可用
 - [x] MacOS
 
-# Install
+# Install 安装
 
 ## AUR user (ArchLinux)
 
@@ -20,7 +20,7 @@
 yaourt -S zff  ## you can also use other app, like yay, pacaur...
 ```
 
-## Others
+## Others 其他
 
 ```bash
 git clone https://github.com/ohzff/Zff
@@ -28,19 +28,19 @@ cd Zff
 sudo bash install.sh
 ```
 
-# Add user
+# Add user 添加用户
 
 ```bash
 zff init
 ```
 
-# Run
+# Run 运行
 
 ```bash
 zff
 ```
 
-# Update
+# Update 更新（手动）
 
 ```bash
 cd /usr/share/ohzff-zff
@@ -54,6 +54,6 @@ Aur users
 yaourt -Syu
 ```
 
-# Feedback: 
+# Feedback 反馈
 
 Issues
