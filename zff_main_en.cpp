@@ -18,7 +18,9 @@ Copyright 2020 LanGongINC
 // #include <fcntl.h>
 #include "getkeyboard.cpp"
 using namespace std;
-#include "getshell.hpp"
+
+int display_log = 0;
+//#include "getshell.hpp"
 #include "get.cpp"
 #include "type.cpp"
 typedef const int ci;
@@ -27,8 +29,16 @@ typedef const double cd;
 // int kfd = 0;
 // struct termios cooked, raw;
 cc fu='F',you='H';
+cc winok[10][100] = {
+  "Excellent",
+  "Great",
+  "Well done",
+  "Good",
+  "Wonderful"
+};
 int tr,kd,fx,fy,hx,hy,s=0;
 int sysE;
+
 int keyboard()
 {
 	// return getchar();
@@ -75,6 +85,7 @@ int check(int num){
 	if(num==112)return 8;
 	if(num==113)return 9;
 	if(num==27)return 27;
+  if(num==224||num==-32)return -1;
 	else return 0;
 }
 ci nx[5]={0,-1,1,0,0};//sxzy
@@ -82,6 +93,24 @@ ci ny[5]={0,0,0,-1,1};
 int n,field[10005][10005];
 int level;
 string name;
+
+int win ()
+{
+  putlevel(level+1);
+  system("clear");
+  int rcc = rand() % 5;
+  printf("%s! Your new level is: %d\nPlay again? [Again : Enter / quit : q ]\n",winok[rcc],level+1);
+  while(1){
+    int r=check(keyboard());
+    if(r==9)return 0;
+    else if (r==1||r==2||r==3||r==4||r==27||r==-1)continue;
+    else if(r==13)return 1;
+    else{
+      printf("------ERR4: Input Error, Pleese Input Again------\n");
+    }
+  }
+}
+
 /*
 
 //This is for pause
@@ -177,10 +206,11 @@ int start(){
 	system("clear");
 	printf("Welcome\n");
 	*/
-  printf (" >> Starting Zff Game...\n");
+  if (display_log) printf (" >> Starting Zff Game...\n");
   //printf (" >> Copy config files\n");
   //system ("cp ")
   level=getlevel();
+  //if (display_log) sleep (5);
 	//system("clear");
 	//printf("                Zff \n\n\n\n\n\n\n\n\n\n         Welcome!\n");
 	//sleep(3);
@@ -189,12 +219,12 @@ int start(){
     printf ("------Err5: User not found! ------\n >> Input 'zff init' to add user\n");
     exit (-5);
 	}
-	system("clear");
+	//system("clear");
 	level=getlevel();
 	name=getuser();
-	cout<<" Welcome "<<name<<endl;
-	printf(" Your level is: %d\n\n\n\n",level);
-	sleep(2);
+	cout<<endl<<" Welcome "<<name<<endl;
+	printf(" Your level is: %d\n",level);
+	sleep(1);
 	if(level==-1){
 		return 1;
 	}
@@ -204,17 +234,7 @@ int game(){
 	s=0;
 	while(true){
 		if(fx==hx&&fy==hy){
-			putlevel(level+1);
-			system("clear");
-			printf("Congratulations! Your new level is: %d\nPlay again? [Again : Enter / quit : q ]\n",level+1);
-			while(1){
-				int r=check(keyboard());
-				if(r==9)return 0;
-				else if(r==13)return 1;
-				else{
-					printf("------ERR4: Input Error, Pleese Input Again------\n");
-				}
-			}
+			return win();
 		}
 		system("clear");
 		for(int i=1;i<=n;i++){
@@ -246,8 +266,8 @@ int game(){
 		if(r!=1 && r!=2 && r!=3 && r!=4 && r!=0 && r!=27){
 			system("clear");
 			printf("------ERR4: Input Error, Pleese Input Again------\n");
-			printf("%d",r);
-			sleep(1);
+			//printf("%d",r);
+			//sleep(0.1);
 			syscls();
 			continue;
 		}
@@ -256,22 +276,11 @@ int game(){
 			system("clear");
 			if(hx+nx[r]<=1||hx+nx[r]>n-1||hy+ny[r]<=1||hy+ny[r]>n-1){
 				printf("----------ERR1: Out----------\n");
-				sleep(0.1);
+				//sleep(0.1);
 				continue;
 			}
 			if(field[hx+nx[r]][hy+ny[r]]==6){
-				putlevel(level+1);
-				syscls();
-				printf("Congratulations! Your new level is: %d\nPlay again? [Again : Enter / quit : q ]\n",level+1);
-				int r=check(keyboard());
-				while(1){
-					int r=check(keyboard());
-					if(r==9)return 0;
-					else if(r==13)return 1;
-					else{
-						printf("------ERR4: Input Error, Pleese Input Again------\n");
-					}
-				}
+        return win ();
 			}
 			if(field[hx+nx[r]][hy+ny[r]]==0){
 				hx=hx+nx[r];
@@ -401,36 +410,53 @@ void findpalse(){
 
 void goodbye(){
 	system("clear");
-	printf (" >> Exit\n");
+	if (display_log) printf (" >> Exit\n");
   //system ("rm -rf ~/.local/share/ohzff-zff && mv zffcc ~/.local/share/ohzff-zff");
   sleep(1);
 	system("clear");
 }
 
+void ready ()
+{
+  if(start()){
+    printf("--------ERR3: Start Error--------\n");
+    //return 3;
+    exit(3);
+  }
+}
+
 int main(int argc, char* argv[]){
   if(argv[1] == NULL)
   {
-    if(start()){
-      printf("--------ERR3: Start Error--------\n");
-      return -3;
-      exit(-3);
-    }
+    ready();
+  }
+  else if (strcmp (argv[1], "log") == 0)
+  {
+    display_log = 1;
+    ready();
   }
 	else if (strcmp(argv[1], "init") == 0)
   {
+    if (display_log) printf (" >> Waiting 'init.sh'\n");
     system ("bash /usr/share/ohzff-zff/init.sh");
     return 0;
   }
   else if (strcmp(argv[1], "update") == 0)
   {
     //system ("cd /usr/share/ohzff-zff && git pull && g++ zff_main_en.cpp -o /usr/bin/zff");
-    printf (" >> You cannot use this via to update the game. Try to use git\n");
+    if (display_log) printf (" >> You cannot use this via to update the game. Try to use git\n");
     return 0;
+  }
+  else if (strcmp(argv[1], "debug") == 0)
+  {
+    //printf ("%d\n", win());
+    if (display_log) printf (" >> Debug mod and exit with %d\n", 6);
+    return 6;
   }
   else
   {
     printf ("------ERR4: Input Error, Please Input again! ------\n");
-    return -4;
+    return 4;
   }
 	sleep(1);
 	findpalse();

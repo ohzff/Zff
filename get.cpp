@@ -17,7 +17,7 @@ void getdir(){
 	cin.rdbuf(stream_buffer_cin);
 	file.close();
 	//return typeU;
-  cout << dir;
+  if (display_log) cout << " >> Getting user config dir\n     " << dir << endl;
 }
 void getinit()
 {
@@ -29,6 +29,12 @@ void getinit()
   strcat(lev,"level");
   strcat(bot,"boot");
   strcat(usr,"user");
+  if (display_log){
+    cout << " >> Getting config file path\n";
+    cout << "   -> Level : " << lev << endl;
+    cout << "   -> Boot : " << bot << endl;
+    cout << "   -> Username : " << usr << endl;
+  } 
 }
 int getlevel(){
 	int typeU;
