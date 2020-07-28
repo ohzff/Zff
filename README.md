@@ -61,7 +61,19 @@ We have these two mod/branch.
 - `master` : Default mod 默认模式
 - `dev` : Develope mod 开发者模式（测试版）
 
-If you change to dev mod, we don't know if that will damage your computer. So please you think a lot about this before change the branch.
+> We don't know if dev branch will damage your computer. So please you think a lot about this before change the branch.
+> 
+> 我们不知道dev分支是否会伤害您的电脑，所以请您慎重考虑后在切换分支。
+
+```bash
+cd /usr/share/ohzff-zff
+sudo git pull
+sudo git checkout dev
+## If you want to change to master, you can input '...checkout master'
+sudo g++ zff_main_en.cpp -o /usr/bin/zff
+```
+
+Then, you can restart the game.
 
 # Feedback 反馈
 
