@@ -4,7 +4,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/langong-dev/Zff)
 ![GitHub top language](https://img.shields.io/github/languages/top/langong-dev/Zff)
 
-## Run in 运行于
+# Run in 运行于
 
 - [ ] [Microsofts Windows (Click to Windows)](https://github.com/langong-dev/Zff-Win.git)
   - None 均不可用
@@ -53,6 +53,15 @@ Aur users
 ```bash
 yaourt -Syu
 ```
+
+# Chang mod(branch) 切换模式
+
+We have these two mod/branch.
+
+- `master` : Default mod 默认模式
+- `dev` : Develope mod 开发者模式（测试版）
+
+If you change to dev mod, we don't know if that will damage your computer. So please you think a lot about this before change the branch.
 
 # Feedback 反馈
 
