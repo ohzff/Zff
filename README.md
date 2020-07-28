@@ -42,6 +42,9 @@ zff
 
 # Update 更新（手动）
 
+> Auto update was DIED.
+> 自动更新已经DIE了
+
 ```bash
 cd /usr/share/ohzff-zff
 sudo git pull
