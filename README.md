@@ -57,3 +57,8 @@ yaourt -Syu
 # Feedback 反馈
 
 Issues
+
+# Author 作者
+
+- @langonginc Main author 主要作者
+- @Arch-Jason AUR publisher AUR发布者
