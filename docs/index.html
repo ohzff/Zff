@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+  <head id="webicon">
+    <title id="title">Loading...</title>
+    <link href="./style.css" rel="stylesheet" />
+    <link href="./prism.css" rel="stylesheet" />
+    <script src="./prism.js"></script>
+    <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+    <script src="./prim.js"></script>
+    <script src="./json.js"></script>
+    <script src="./jquery.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    <script>
+$(document).ready(function () { // this need jquery
+  renderMathInElement(document.body, {
+    // ...options...
+    delimiters: [
+      { left: "$$", right: "$$", display: true },
+      { left: "$", right: "$", display: false },
+      { left: "\\[", right: "\\]", display: true }
+    ]
+  });
+});
+	    
+function change(value){
+  fetch(value)
+    .then(function(response) {
+      return response.text()
+    }).then(function(body) {
+      var converter = new showdown.Converter(),
+        text      = body,
+        html      = converter.makeHtml(text);
+      document.getElementById("show").innerHTML = html+prim;
+      self.Prism.highlightAll("show");
+      renderMathInElement(document.body,{
+					delimiters: [
+						{left: "$$", right: "$$", display: true},
+						{left: "$", right: "$", display: false}
+					]
+				})
+    })
+}
+jsondata = [];
+function getconf()
+{
+  fetch("config.json")
+    .then(function(response) {
+      return response.json()
+    }).then(function(body) {
+      var data = body;
+      jsondata = data;
+      //console.info(jsondata);
+      if (jsondata.url.length != jsondata.tit.length)
+      {
+        alert ("Error with config-file 'config.json'.\nConfig-Json is error, object url's length != object tit's length.\n");
+        console.error ("Error with config-file 'config.json'.\nConfig-Json is error, object url's length != object tit's length.\n");
+      }
+      for (var i = 0; i < jsondata.url.length; i ++)
+      {
+        var butd = '<button onclick="change(\''+jsondata.url[i]+'\')">'+jsondata.tit[i]+'</button><br>';
+        but += butd;
+      }
+      document.getElementById("list").innerHTML = but;
+      change(jsondata.home);
+      document.getElementById("webicon").innerHTML += '<link rel="icon" href="'+jsondata.icon+'"/>';
+      document.getElementById("title").innerHTML = jsondata.title;
+      document.getElementById("pgtit").innerHTML = jsondata.title;
+      document.getElementById("foot").innerHTML = jsondata.foot;
+    })
+}
+
+getconf();
+var but="";
+  </script>
+  </head>
+  <body>
+    <div class="pages">
+      <br>
+      <div class="left">
+        <div class="pages">
+          <br>
+          <center><h2 id="pgtit">Loading</h2></center>
+          <div class="" id="list">
+            Loading...
+          </div>
+          <br><br>
+        </div>
+      </div>
+      <div class="right">
+        <div class="pages">
+          <br>
+          <div id="show">
+            Loading...
+          </div>
+          <br>
+          <br>
+        </div>
+      </div>
+      <div id="prims"></div>
+      <br>
+      <div class="right">
+        <br>
+        <div class="pages" id="foot"></div>
+        <br>
+      </div>
+    </div>
+    <br>
+</body>
+</html>

@@ -1,0 +1,72 @@
+.pages{
+  width:90%;
+  margin: 0 auto;
+  /*border-style: solid solid solid solid;
+  border-width: 1px;*/
+}
+.head{
+  width:90%;
+  margin: 0 auto;
+  padding-left: 17px;
+}
+.pg2{
+  /*background-color:#eeeeee;*/
+  width:90%;
+  margin: 0 auto;
+}
+.input input{
+  outline-style: none ;
+  border: 0;
+  border-radius: 14px;
+  padding: 13px 14px;
+  width: 90%;
+  font-size: 15px;
+}
+.input textarea{
+  outline-style: none ;
+  border:0;
+  border-radius: 22px;
+  padding: 10px;
+  resize: none;
+  width: 91%;
+  font-size: 15px;
+}
+.b input{
+  outline-style: none ;
+  border: 1;
+  border-radius: 14px;
+  padding: 13px 14px;
+  font-size: 16px;
+}
+.b button{
+  outline-style: none ;
+  border: 1;
+  border-radius: 14px;
+  padding: 13px 14px;
+  font-size: 16px;
+}
+.usrimg a{
+  text-decoration: none;
+  color: black;
+}
+.usrimg a:visited{
+  text-decoration: none;
+  color: black;
+}
+.usrimg a:hover {
+  text-decoration: none;
+  color:black;
+}
+.usrimg a:active{
+  text-decoration:none;
+  color:black;
+}
+.left {
+  float: left;
+  width: 25%;
+  background-color: #f0f0f0;
+}
+.right {
+  margin-left: 28%;
+  background-color: #f0f0f0;
+}

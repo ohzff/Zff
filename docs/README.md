@@ -9,12 +9,10 @@
 - [ ] [Microsofts Windows (Click to Windows)](https://github.com/langong-dev/Zff-Win.git)
   - None 均不可用
 - [x] Linux
-  - All 全可用
-- [x] MacOS
-
-# Install/Usage/Update Guide 安装、使用、更新
-
-[ > In our Wiki ](https://ohzff.github.io/Zff)
+  - Archlinux/Manjaro : AUR
+  - Ubuntu/Debian : Deb
+  - Others : npm/other
+- [x] MacOS : npm/other
 
 # Feedback 反馈
 
@@ -24,3 +22,4 @@ Issues
 
 - @langonginc Main author and yarn/npm publisher 主要作者，yarn/npm发布者
 - @Arch-Jason AUR, DEB publisher AUR,DEB发布者
+

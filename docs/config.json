@@ -1,0 +1,8 @@
+{
+  "title": "Zff Wiki",
+  "home": "README.md",
+  "icon": "icon.png",
+  "url": ["README.md","install.md","usage.md","update.md"],
+  "tit": ["Home  首页","Install Guide  安装说明","Usage Guide  使用说明", "Update Guide  更新说明"],
+  "foot": "<center>Powered by <a href='https://github.com/langong-dev/oh-wiki'> Oh-Wiki </a> &bull; It is for <a href='ohzff.github.io'> OhZff - Zff Game </a></center>"
+}
