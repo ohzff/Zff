@@ -27,8 +27,8 @@ Made by LanGong Development Team
 - [ ] [Microsofts Windows (Click to Windows)](https://github.com/langong-dev/Zff-Win.git)
   - None 均不可用
 - [x] Linux
-  - Archlinux/Manjaro : AUR
-  - Ubuntu/Debian : Deb
+  - Arch/Manjaro/Arco : AUR
+  - Ubuntu/Debian/Kubuntu : Deb
   - Others : npm/other
 - [x] MacOS : npm/other
 
