@@ -14,44 +14,68 @@
 
 # Install 安装
 
-## AUR user (ArchLinux)
+## By AUR (ArchLinux) 通过aur安装
 
 ```bash
-yaourt -S zff  ## you can also use other app, like yay, pacaur...
+$ yaourt -S zff  ## you can also use other app, like yay, pacaur...
+```
+
+## By npm
+
+```bash
+# npm install -g langong-zff
+# bash zffinit
+```
+
+## By dkpg (Debian, Ubuntu) 通过dkpg安装
+
+Download `zff-deb.deb` from releases page.
+
+从下载（releases）页面下载 `zff-deb.deb`。
+
+```bash
+# dkpg -i zff-deb.deb
 ```
 
 ## Others 其他
 
 ```bash
-git clone https://github.com/ohzff/Zff
-cd Zff
-sudo bash install.sh
+$ git clone https://github.com/ohzff/Zff
+$ cd Zff
+# bash install.sh
 ```
 
 # Add user 添加用户
 
 ```bash
-zff init
+$ zff init
 ```
 
 # Run 运行
 
 ```bash
-zff
+$ zff
 ```
 
 # Update 更新（手动）
 
-> Auto update was DIED.
-> 自动更新已经DIE了
+## DEB and Other
 
 ```bash
-cd /usr/share/ohzff-zff
-sudo git pull
-sudo g++ zff_main_en.cpp -o /usr/bin/zff
+$ cd /usr/share/ohzff-zff
+# git pull
+# g++ zff_main_en.cpp -o /usr/bin/zff
 ```
 
-Aur users
+## npm
+
+```bash
+$ cd /usr/lib/node_modules/langong-zff
+# git pull
+# g++ zff_main_en.cpp -o zff
+```
+
+## Aur users
 
 ```bash
 yaourt -Syu
@@ -69,11 +93,19 @@ We have these two mod/branch.
 > 我们不知道dev分支是否会伤害您的电脑，所以请您慎重考虑后在切换分支。
 
 ```bash
-cd /usr/share/ohzff-zff
-sudo git pull
-sudo git checkout dev
-## If you want to change to master, you can input '...checkout master'
-sudo g++ zff_main_en.cpp -o /usr/bin/zff
+    ## AUR, DEB, Other
+$ cd /usr/share/ohzff-zff
+    ## npm
+$ cd /usr/lib/node_modules/langong-zff
+
+# git pull
+# git checkout dev
+    ## If you want to change to master, you can input '...checkout master'
+
+    ## AUR, DEB, Other
+# g++ zff_main_en.cpp -o /usr/bin/zff
+    ## npm
+# g++ zff_main_en.cpp -o zff
 ```
 
 Then, you can restart the game.
@@ -84,5 +116,5 @@ Issues
 
 # Author 作者
 
-- @langonginc Main author 主要作者
-- @Arch-Jason AUR publisher AUR发布者
+- @langonginc Main author and yarn/npm publisher 主要作者，yarn/npm发布者
+- @Arch-Jason AUR, DEB publisher AUR,DEB发布者
