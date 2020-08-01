@@ -13,7 +13,7 @@ $ yaourt -S zff  ## you can also use other app, like yay, pacaur...
 # bash zffinit
 ```
 
-## By dkpg (Debian, Ubuntu) 通过dkpg安装
+## By dpkg (Debian, Ubuntu) 通过dpkg安装
 
 Download `zff-*.deb` from releases page.
 
