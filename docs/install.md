@@ -20,7 +20,7 @@ Download `zff-*.deb` from releases page.
 从下载（releases）页面下载 `zff-*.deb`。
 
 ```bash
-# dkpg -i zff-deb.deb
+# dpkg -i zff-deb.deb
 ```
 
 ## Others 其他
