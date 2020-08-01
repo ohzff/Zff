@@ -1,7 +1,8 @@
 /*
-LanGongINC
-LanGongDEV
-Copyright 2020 LanGongINC
+
+   Made By LanGong Development Team,
+   2020
+
 */
 #include<iostream>
 #include<cstdio>
@@ -106,7 +107,7 @@ int win ()
     else if (r==1||r==2||r==3||r==4||r==27||r==-1)continue;
     else if(r==13)return 1;
     else{
-      printf("------ERR4: Input Error, Pleese Input Again------\n");
+      //printf("------ERR4: Input Error, Pleese Input Again------\n");
     }
   }
 }
@@ -214,6 +215,7 @@ int start(){
 	//system("clear");
 	//printf("                Zff \n\n\n\n\n\n\n\n\n\n         Welcome!\n");
 	//sleep(3);
+  printf ("  __________    _________    _________\n /          \\  /         \\  /         \\\n \\_______   /  |   ______/  |   ______/\n        /  /   |  /         |  /\n       /  /    |  \\______   |  \\______\n      /  /     |         \\  |         \\\n     /  /      |   ______/  |   ______/\n    /  /       |  /         |  /\n   /  /        |  |         |  |\n  /  /         |  |         |  |\n /   \\______   |  |         |  |\n |          \\  |  |         |  |\n \\__________/  \\__/         \\__/\n");
 	if(level==-1||getboot()!=1){
 		//maken();
     printf ("------Err5: User not found! ------\n >> Input 'zff init' to add user\n");
@@ -222,7 +224,7 @@ int start(){
 	//system("clear");
 	level=getlevel();
 	name=getuser();
-	cout<<endl<<" Welcome "<<name<<endl;
+	cout<<endl<<" Login as "<<name<<endl;
 	printf(" Your level is: %d\n",level);
 	sleep(1);
 	if(level==-1){
