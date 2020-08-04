@@ -26,17 +26,12 @@ We have these two mod/branch.
 ```bash
     ## AUR, DEB, Other
 $ cd /usr/share/ohzff-zff
-    ## npm
-$ cd /usr/lib/node_modules/langong-zff
 
 # git pull
 # git checkout dev
     ## If you want to change to master, you can input '...checkout master'
 
-    ## AUR, DEB, Other
 # g++ zff_main_en.cpp -o /usr/bin/zff
-    ## npm
-# g++ zff_main_en.cpp -o zff
 ```
 
 Then, you can restart the game.
