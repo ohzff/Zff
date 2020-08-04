@@ -29,8 +29,8 @@ Made by LanGong Development Team
 - [x] Linux
   - Arch/Manjaro/Arco : AUR
   - Ubuntu/Debian/Kubuntu : Deb
-  - Others : npm/other
-- [x] MacOS : npm/other
+  - Others : other
+- [x] MacOS : other
 
 # Feedback 反馈
 
@@ -38,6 +38,6 @@ Issues
 
 # Author 作者
 
-- @langonginc Main author and yarn/npm publisher 主要作者，yarn/npm发布者
+- @langonginc Main author 主要作者
 - @Arch-Jason AUR, DEB publisher AUR,DEB发布者
 
