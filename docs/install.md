@@ -6,13 +6,6 @@
 $ yaourt -S zff  ## you can also use other app, like yay, pacaur...
 ```
 
-## By npm
-
-```bash
-# npm install -g langong-zff
-# bash zffinit
-```
-
 ## By dpkg (Debian, Ubuntu) 通过dpkg安装
 
 Download `zff-*.deb` from releases page.
