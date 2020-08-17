@@ -29,13 +29,34 @@ typedef const char cc;
 typedef const double cd;
 // int kfd = 0;
 // struct termios cooked, raw;
+//
+//
+//
+
+
+void printlogo()
+{
+  printf ("  __________    _________    _________\n /          \\  /         \\  /         \\\n \\_______   /  |   ______/  |   ______/\n        /  /   |  /         |  /\n       /  /    |  \\______   |  \\______\n      /  /     |         \\  |         \\\n     /  /      |   ______/  |   ______/\n    /  /       |  /         |  /\n   /  /        |  |         |  |\n  /  /         |  |         |  |\n /   \\______   |  |         |  |\n |          \\  |  |         |  |\n \\__________/  \\__/         \\__/\n\n Zff game is made by LanGong Development Team.\n");
+}
+
+
+
 cc fu='F',you='H';
 cc winok[10][100] = {
   "Excellent",
   "Great",
   "Well done",
   "Good",
-  "Wonderful"
+  "Wonderful",
+  "Perfect"
+};
+cc ebox[20][250] = {
+  "",
+  " ---------- Error 1: Out ----------\n",
+  " ---------- Error 2: Install error ----------\n",
+  " ---------- Error 3: Start game error ----------\n",
+  " ---------- Error 4: Input error ----------\n input again.\n",
+  " ---------- Error 5: User not found ----------\n run 'zff init' to fix.\n"
 };
 int tr,kd,fx,fy,hx,hy,s=0;
 int sysE;
@@ -99,8 +120,8 @@ int win ()
 {
   putlevel(level+1);
   system("clear");
-  int rcc = rand() % 5;
-  printf("%s! Your new level is: %d\nPlay again? [Again : Enter / quit : q ]\n",winok[rcc],level+1);
+  int rcc = rand() % 6;
+  printf(" %s! Your new level is: %d\n Play again? [Again : Enter / quit : q ]\n",winok[rcc],level+1);
   while(1){
     int r=check(keyboard());
     if(r==9)return 0;
@@ -215,10 +236,10 @@ int start(){
 	//system("clear");
 	//printf("                Zff \n\n\n\n\n\n\n\n\n\n         Welcome!\n");
 	//sleep(3);
-  printf ("  __________    _________    _________\n /          \\  /         \\  /         \\\n \\_______   /  |   ______/  |   ______/\n        /  /   |  /         |  /\n       /  /    |  \\______   |  \\______\n      /  /     |         \\  |         \\\n     /  /      |   ______/  |   ______/\n    /  /       |  /         |  /\n   /  /        |  |         |  |\n  /  /         |  |         |  |\n /   \\______   |  |         |  |\n |          \\  |  |         |  |\n \\__________/  \\__/         \\__/\n");
+  printlogo();
 	if(level==-1||getboot()!=1){
 		//maken();
-    printf ("------Err5: User not found! ------\n >> Input 'zff init' to add user\n");
+    printf ("%s", ebox[5]);
     exit (-5);
 	}
 	//system("clear");
@@ -252,7 +273,7 @@ int game(){
 			}
 			cout<<endl;
 		}
-		printf("\nUse 'UP''DOWN''LEFT''RIGHT' to contral 'H' to catch 'F'\nPress 'R' to restart game,\nPress 'Q' to quit game\n");
+		printf("\n Use 'UP''DOWN''LEFT''RIGHT' to contral 'H' to catch 'F'\n Press 'R' to restart game\n Press 'Q' to quit game\n");
 		int r=check(keyboard());
 		// printf("%d\n",r);
 		// sleep(1);
@@ -267,7 +288,7 @@ int game(){
 		}
 		if(r!=1 && r!=2 && r!=3 && r!=4 && r!=0 && r!=27){
 			system("clear");
-			printf("------ERR4: Input Error, Pleese Input Again------\n");
+			printf("%s",ebox[4]);
 			//printf("%d",r);
 			//sleep(0.1);
 			syscls();
@@ -277,7 +298,7 @@ int game(){
 			//move
 			system("clear");
 			if(hx+nx[r]<=1||hx+nx[r]>n-1||hy+ny[r]<=1||hy+ny[r]>n-1){
-				printf("----------ERR1: Out----------\n");
+				printf("%s", ebox[1]);
 				//sleep(0.1);
 				continue;
 			}
@@ -412,8 +433,9 @@ void findpalse(){
 
 void goodbye(){
 	system("clear");
-	if (display_log) printf (" >> Exit\n");
   //system ("rm -rf ~/.local/share/ohzff-zff && mv zffcc ~/.local/share/ohzff-zff");
+  printlogo();
+  printf("\n Exit Zff game.\n");
   sleep(1);
 	system("clear");
 }
@@ -421,7 +443,7 @@ void goodbye(){
 void ready ()
 {
   if(start()){
-    printf("--------ERR3: Start Error--------\n");
+    printf("%s", ebox[3]);
     //return 3;
     exit(3);
   }
@@ -457,7 +479,7 @@ int main(int argc, char* argv[]){
   }
   else
   {
-    printf ("------ERR4: Input Error, Please Input again! ------\n");
+    printf ("%s", ebox[4]);
     return 4;
   }
 	sleep(1);

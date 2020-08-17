@@ -32,6 +32,10 @@ Made by LanGong Development Team
   - Others : other
 - [x] MacOS : other
 
+## Warning
+
+npm and yarn are not available to use.
+
 # Feedback 反馈
 
 Issues

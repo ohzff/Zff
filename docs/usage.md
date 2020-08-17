@@ -2,13 +2,13 @@
 
 ## Add user 添加用户
 
-```bash
+```
 $ zff init
 ```
 
 ## Run 运行
 
-```bash
+```
 $ zff
 ```
 
@@ -23,8 +23,7 @@ We have these two mod/branch.
 > 
 > 我们不知道dev分支是否会伤害您的电脑，所以请您慎重考虑后在切换分支。
 
-```bash
-    ## AUR, DEB, Other
+```
 $ cd /usr/share/ohzff-zff
 
 # git pull
