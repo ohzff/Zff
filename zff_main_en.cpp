@@ -52,10 +52,10 @@ cc winok[10][100] = {
 };
 cc ebox[20][250] = {
   "",
-  " ---------- Error 1: Out ----------\n",
-  " ---------- Error 2: Install error ----------\n",
-  " ---------- Error 3: Start game error ----------\n",
-  " ---------- Error 4: Input error ----------\n input again.\n",
+  " ---------- Error 1: Out ----------",
+  " ---------- Error 2: Install error ----------",
+  " ---------- Error 3: Start game error ----------",
+  " ---------- Error 4: Input error ----------",
   " ---------- Error 5: User not found ----------\n run 'zff init' to fix.\n"
 };
 int tr,kd,fx,fy,hx,hy,s=0;
@@ -239,7 +239,7 @@ int start(){
   printlogo();
 	if(level==-1||getboot()!=1){
 		//maken();
-    printf ("%s", ebox[5]);
+    printf ("%s\n", ebox[5]);
     exit (-5);
 	}
 	//system("clear");
@@ -255,11 +255,14 @@ int start(){
 }
 int game(){
 	s=0;
+  char rce[300]="";
 	while(true){
 		if(fx==hx&&fy==hy){
 			return win();
 		}
 		system("clear");
+    printf ("  %s\n", rce);
+    strcpy(rce,"");
 		for(int i=1;i<=n;i++){
 			for(int j=0;j<27-n;j++){
 				cout<<" ";
@@ -288,17 +291,19 @@ int game(){
 		}
 		if(r!=1 && r!=2 && r!=3 && r!=4 && r!=0 && r!=27){
 			system("clear");
-			printf("%s",ebox[4]);
+			//printf("%s",ebox[4]);
+      strcpy(rce,ebox[4]);
 			//printf("%d",r);
 			//sleep(0.1);
-			syscls();
+			//syscls();
 			continue;
 		}
 		if(r>0&&r<5){
 			//move
 			system("clear");
 			if(hx+nx[r]<=1||hx+nx[r]>n-1||hy+ny[r]<=1||hy+ny[r]>n-1){
-				printf("%s", ebox[1]);
+				//printf("%s", ebox[1]);
+        strcpy(rce,ebox[1]);
 				//sleep(0.1);
 				continue;
 			}
@@ -479,7 +484,7 @@ int main(int argc, char* argv[]){
   }
   else
   {
-    printf ("%s", ebox[4]);
+    printf ("%s\n", ebox[4]);
     return 4;
   }
 	sleep(1);
