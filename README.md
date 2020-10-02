@@ -6,7 +6,7 @@
 
 # Run in 运行于
 
-- [ ] [Microsofts Windows (Click to Windows)](https://github.com/langong-dev/Zff-Win.git)
+- [ ] [Coming later] Windows
   - None 均不可用
 - [x] Linux
   - All 全可用
