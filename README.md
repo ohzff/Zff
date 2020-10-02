@@ -22,5 +22,5 @@ Issues
 
 # Author 作者
 
-- @langonginc Main author and yarn/npm publisher 主要作者，yarn/npm发布者
+- @langonginc Main author and yarn/npm publisher 主要作者
 - @Arch-Jason AUR, DEB publisher AUR,DEB发布者
