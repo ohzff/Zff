@@ -4,6 +4,43 @@
    2020
 
 */
+
+
+
+
+/*
+ * LanGong OhZff Zff game is undered MIT-License
+ *
+ * MIT License
+ *
+ * Copyright (c) 2020 LanGongDEV
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ * 
+*/
+
+
+
+
+
+
+
 #include<iostream>
 #include<cstdio>
 #include<cstdlib>
@@ -467,7 +504,7 @@ int main(int argc, char* argv[]){
 	else if (strcmp(argv[1], "init") == 0)
   {
     if (display_log) printf (" >> Waiting 'init.sh'\n");
-    system ("bash /usr/share/ohzff-zff/init.sh");
+    system ("bash /usr/share/ohzff-zff/init.sh || bash ./init.sh");
     return 0;
   }
   else if (strcmp(argv[1], "update") == 0)
@@ -481,6 +518,12 @@ int main(int argc, char* argv[]){
     //printf ("%d\n", win());
     if (display_log) printf (" >> Debug mod and exit with %d\n", 6);
     return 6;
+  }
+  else if (strcmp(argv[1], "license") == 0)
+  {
+    printf (" LanGong OhZff Zff game is undered MIT License.\n\n\n");
+    printf ("MIT License\n\nCopyright (c) 2020 LanGongDEV\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\n  The above copyright notice and this permission notice shall be included in all\n  copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n");
+    return 0;
   }
   else
   {
