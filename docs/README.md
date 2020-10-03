@@ -24,8 +24,7 @@ Made by LanGong Development Team
 
 # Run in 运行于
 
-- [ ] [Microsofts Windows (Click to Windows)](https://github.com/langong-dev/Zff-Win.git)
-  - None 均不可用
+- [ ] [Coming later] Windows
 - [x] Linux
   - Arch/Manjaro/Arco : AUR
   - Ubuntu/Debian/Kubuntu : Deb
