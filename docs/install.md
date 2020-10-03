@@ -8,7 +8,7 @@
 
 ## By AUR (ArchLinux) 通过aur安装
 
-```
+```cpp
 $ yaourt -S zff  ## you can also use other app, like yay, pacaur...
 ```
 
@@ -18,14 +18,14 @@ Download `zff-*.deb` from releases page.
 
 从下载（releases）页面下载 `zff-*.deb`。
 
-```
+```cpp
 # dpkg -i zff-deb.deb
 ```
 
-## Others 其他
+## Others (Linux, MacOS) 其他
 
-```
-$ git clone https://github.com/ohzff/Zff
+```cpp
+$ git clone https://github.com/ohzff/Zff.git
 $ cd Zff
 # bash install.sh
 ```
