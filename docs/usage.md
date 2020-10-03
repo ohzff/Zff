@@ -1,15 +1,27 @@
 # Usage 使用
 
-## Add user 添加用户
+`zff [OPTION]` or `./zff [OPTIONS]`.
 
-```
+> use `zff` when you installed OhZff zff.
+>
+> use `./zff` when you didn't install OhZff or you cannot install OhZff Zff.
+
+## Init 初始化
+
+```cpp
 $ zff init
 ```
 
 ## Run 运行
 
-```
+```cpp
 $ zff
+```
+
+## View License 查看版权信息
+
+```cpp
+$ zff license
 ```
 
 # Chang mod(branch) 切换模式
@@ -23,7 +35,7 @@ We have these two mod/branch.
 > 
 > 我们不知道dev分支是否会伤害您的电脑，所以请您慎重考虑后在切换分支。
 
-```
+```cpp
 $ cd /usr/share/ohzff-zff
 
 # git pull
