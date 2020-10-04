@@ -27,5 +27,5 @@ Download `zff-*.deb` from releases page.
 ```cpp
 $ git clone https://github.com/ohzff/Zff.git
 $ cd Zff
-# bash install.sh
+# bash atinstall.sh
 ```
