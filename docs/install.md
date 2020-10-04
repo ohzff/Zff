@@ -25,7 +25,5 @@ Download `zff-*.deb` from releases page.
 ## Others (Linux, MacOS) 其他
 
 ```cpp
-$ git clone https://github.com/ohzff/Zff.git
-$ cd Zff
-# bash atinstall.sh
+# bash $(curl http://cdn.jsdelivr.net/gh/ohzff/zff/atinstall.sh)
 ```
