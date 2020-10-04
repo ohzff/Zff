@@ -19,6 +19,11 @@ cp ./zff /usr/bin/zff
 cp -r ./* /usr/share/ohzff-zff/
 
 echo '    -> (4/4) This step have done.'
+echo ' >> Delete Temp file'
+echo '    -> (0/1) Delete repo'
+cd ~
+rm ~/.tmp-zff -rf
+echo '    -> (1/1) This step have done.'
 echo ' >> Check Install'
 echo '    -> (0/1) Check files...'
 isok=0

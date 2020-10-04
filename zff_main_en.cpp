@@ -307,7 +307,7 @@ int game(){
     //printf ("  User %s, level %d", name, level);
     cout << "  Login as " << name << ", level is " << level << ". Good luck!\n";
     printf ("  %s\n", rce);
-    strcpy(rce,"");
+    strcpy(rce,"                                                  ");
 		for(int i=1;i<=n;i++){
 			for(int j=0;j<27-n;j++){
 				cout<<" ";
