@@ -4,7 +4,7 @@ echo " OhZff Zff Install Script"
 echo ' >> Install Zff...'
 echo '    -> (0/3) Prepare...'
 mkdir -p ~/.tmp-zff
-mkfir -p /usr/share/ohzff-zff
+mkdir -p /usr/share/ohzff-zff
 cd ~/.tmp-zff
 
 echo '    -> (1/4) Clone repo from GitHub:ohzff/Zff...'
