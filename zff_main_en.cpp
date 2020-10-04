@@ -55,6 +55,7 @@
 // #include <unistd.h>
 // #include <fcntl.h>
 #include "getkeyboard.cpp"
+#include "defines.hpp"
 using namespace std;
 
 int display_log = 0;
@@ -155,13 +156,17 @@ string name;
 
 int win ()
 {
+  //SHOW_CURSOR();
   putlevel(level+1);
   system("clear");
   int rcc = rand() % 6;
   printf(" %s! Your new level is: %d\n Play again? [Again : Enter / quit : q ]\n",winok[rcc],level+1);
   while(1){
     int r=check(keyboard());
-    if(r==9)return 0;
+    if(r==9){
+      SHOW_CURSOR();
+      return 0;
+    }
     else if (r==1||r==2||r==3||r==4||r==27||r==-1)continue;
     else if(r==13)return 1;
     else{
@@ -297,7 +302,10 @@ int game(){
 		if(fx==hx&&fy==hy){
 			return win();
 		}
-		system("clear");
+		//system("clear");
+    MOVETO(1,1);
+    //printf ("  User %s, level %d", name, level);
+    cout << "  Login as " << name << ", level is " << level << ". Good luck!\n";
     printf ("  %s\n", rce);
     strcpy(rce,"");
 		for(int i=1;i<=n;i++){
@@ -314,6 +322,7 @@ int game(){
 			cout<<endl;
 		}
 		printf("\n Use 'UP''DOWN''LEFT''RIGHT' to contral 'H' to catch 'F'\n Press 'R' to restart game\n Press 'Q' to quit game\n");
+    MOVETO(1,1);
 		int r=check(keyboard());
 		// printf("%d\n",r);
 		// sleep(1);
@@ -327,7 +336,7 @@ int game(){
 			return 0;
 		}
 		if(r!=1 && r!=2 && r!=3 && r!=4 && r!=0 && r!=27){
-			system("clear");
+			//system("clear");
 			//printf("%s",ebox[4]);
       strcpy(rce,ebox[4]);
 			//printf("%d",r);
@@ -337,7 +346,7 @@ int game(){
 		}
 		if(r>0&&r<5){
 			//move
-			system("clear");
+			//system("clear");
 			if(hx+nx[r]<=1||hx+nx[r]>n-1||hy+ny[r]<=1||hy+ny[r]>n-1){
 				//printf("%s", ebox[1]);
         strcpy(rce,ebox[1]);
@@ -447,7 +456,10 @@ void start_game(){
 	level=getlevel();
 	fx=n-1,fy=n-1,hx=2,hy=2;
 	field[2][2]=5,field[n-1][n-1]=6;
+  HIDE_CURSOR();
 	if(game()==1)start_game();
+  RESET_CURSOR();
+  SHOW_CURSOR();
 }
 /*
 
@@ -475,6 +487,7 @@ void findpalse(){
 
 void goodbye(){
 	system("clear");
+  SHOW_CURSOR();
   //system ("rm -rf ~/.local/share/ohzff-zff && mv zffcc ~/.local/share/ohzff-zff");
   printlogo();
   printf("\n Exit Zff game.\n");
