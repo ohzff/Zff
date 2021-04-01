@@ -38,7 +38,9 @@
 
 
 
-
+/*
+* Main Zff file (for Linux and MacOS)
+*/
 
 
 #include<iostream>
@@ -46,7 +48,6 @@
 #include<cstdlib>
 #include<queue>
 
-// #include"rand.cpp"
 #include<curses.h>
 #include <unistd.h>
 // #include <signal.h>
@@ -65,11 +66,6 @@ int display_log = 0;
 typedef const int ci;
 typedef const char cc;
 typedef const double cd;
-// int kfd = 0;
-// struct termios cooked, raw;
-//
-//
-//
 
 
 void printlogo()
