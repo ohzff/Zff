@@ -1,4 +1,4 @@
-name: Windows x32 MSVC Build
+name: Windows x86 MSVC Build
 
 on:
   push:
@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ilammy/msvc-dev-cmd@v1
         with:
-          arch: x32
+          arch: x86
       - name: Build something requiring CL.EXE
         run: |
           make win-zff_main
