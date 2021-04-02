@@ -1,4 +1,4 @@
-name: Windows MSVC Build
+name: Windows x64 MSVC Build
 
 on:
   push:
@@ -14,10 +14,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x64
       - name: Build something requiring CL.EXE
         run: |
           make win-zff_main
-
       # Runs a single command using the runners shell
       - name: Check file
         run: dir
