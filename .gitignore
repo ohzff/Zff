@@ -34,3 +34,7 @@
 
 # Npm
 node_modules/*
+
+# Zff run file
+zff
+zff_main_en
