@@ -24,9 +24,27 @@
 
 在 Releases 页面中下载 `Zff-MacOS` Download `Zff-MacOS` in the releases page.
 
+在终端中运行 Run this in Console：
+
+```bash
+cd YOUR-FILE-POSITION
+./Zff-MacOS
+```
+
 ## Ubuntu Linux
 
 在 Releases 页面中下载 `Zff-Ubuntu` Download `Zff-Ubuntu` in the releases page.
+
+在终端中运行 Run this in Console：
+
+```bash
+cd YOUR-FILE-POSITION
+./Zff-Ubuntu
+```
+
+## Archlinux AUR
+
+The version of AUR is not the latest, we recommend you to compile by yourself in "Other System".
 
 ## Other system
 
