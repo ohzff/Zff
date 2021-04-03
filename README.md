@@ -6,11 +6,13 @@
 
 # Run in 运行于
 
-- [ ] [Coming later] Windows
-  - None 均不可用
+- [x] Windows
+  - All 全可用
 - [x] Linux
   - All 全可用
 - [x] MacOS
+  - x86_64 支持自动编译
+  - M1 需要手动编译
 
 # Install/Usage/Update Guide 安装、使用、更新
 
