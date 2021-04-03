@@ -18,8 +18,8 @@ int keyboard()
 	while (1)
 	{
 		if (_kbhit())
-		{//Èç¹ûÓĞ°´¼ü°´ÏÂ£¬Ôò_kbhit()º¯Êı·µ»ØÕæ
-			ch = _getch();//Ê¹ÓÃ_getch()º¯Êı»ñÈ¡°´ÏÂµÄ¼üÖµ
+		{//å¦‚æœæœ‰æŒ‰é”®æŒ‰ä¸‹ï¼Œåˆ™_kbhit()å‡½æ•°è¿”å›çœŸ
+			ch = _getch();//ä½¿ç”¨_getch()å‡½æ•°è·å–æŒ‰ä¸‹çš„é”®å€¼
 			Sleep(10);
 			return ch;
 		}
@@ -104,28 +104,28 @@ void putpalse(){
 void maken(){
 	putlevel(0);
 	level=getlevel();
-	printf("ÕıÔÚ³õÊ¼»¯¡­¡­\n");
+	printf("æ­£åœ¨åˆå§‹åŒ–â€¦â€¦\n");
 	Sleep(1000);
-	printf("Éè¶¨ÄúµÄÓÃ»§Ãû\n");
+	printf("è®¾å®šæ‚¨çš„ç”¨æˆ·å\n");
 	string UserNameSET;
 	getline(cin,UserNameSET);
 	putuser(UserNameSET);
-	printf("¼´½«Íê³É¡­¡­");
+	printf("å³å°†å®Œæˆâ€¦â€¦");
 	Sleep(100);
 	system("cls");
 	Sleep(100);
 }
 void start(){
 	system("color F0");
-	printf("ÇëÉÔºó¡­¡­\n");
+	printf("è¯·ç¨åâ€¦â€¦\n");
 	level=getlevel();
 	
 	system("cls");
-	printf("                ×²Fufu \n\n\n\n\n\n\n\n\n\n                 »¶Ó­\n");
+	printf("                æ’Fufu \n\n\n\n\n\n\n\n\n\n                 æ¬¢è¿\n");
 	if(level==-1){
 		maken();
 	}
-	printf("                 »¶Ó­");
+	printf("                 æ¬¢è¿");
 	level=getlevel();
 	name=getuser();
 	cout<<name<<endl;
@@ -140,7 +140,7 @@ int game(){
 		if(fx==hx&&fy==hy){
 			putlevel(level+1);
 			system("cls");
-			printf("ÓÎÏ·½áÊø£¬¹§Ï²£¡Ê¤Àû£¡³É¹¦½ú¼¶£¡\n¼ÌĞøÓÎÏ·£¿[¼ÌĞø£ºq / Àë¿ª£ºEnter]\n");
+			printf("æ¸¸æˆç»“æŸï¼Œæ­å–œï¼èƒœåˆ©ï¼æˆåŠŸæ™‹çº§ï¼\nç»§ç»­æ¸¸æˆï¼Ÿ[ç»§ç»­ï¼šq / ç¦»å¼€ï¼šEnter]\n");
 			int r=check(keyboard());
 			if(r==9)return 1;
 			else return 0;
@@ -156,7 +156,7 @@ int game(){
 			}
 			cout<<endl;
 		}
-		printf("\nÊ¹ÓÃ¡°ÉÏÏÂ×óÓÒ¡±°´¼üÒÔ¿ØÖÆĞ¡ÈË£¬°´ÏÂR¼üÖØĞÂ¿ªÊ¼£¬°´ÏÂP¼ü±£´æ»º´æ\n");
+		printf("\nä½¿ç”¨â€œä¸Šä¸‹å·¦å³â€æŒ‰é”®ä»¥æ§åˆ¶å°äººï¼ŒæŒ‰ä¸‹Ré”®é‡æ–°å¼€å§‹ï¼ŒæŒ‰ä¸‹Pé”®ä¿å­˜ç¼“å­˜\n");
 		int r=check(keyboard());
 		if(r==224)continue;
 		cout<<r;
@@ -169,7 +169,7 @@ int game(){
 		if(r==8){
 			system("cls");
 			putpalse();
-			printf("»º´æ¼ÓÔØÍê±Ï£¬ÔÙ¼û\n");
+			printf("ç¼“å­˜åŠ è½½å®Œæ¯•ï¼Œå†è§\n");
 			Sleep(2000);
 			exit(1);
 		}
@@ -177,7 +177,7 @@ int game(){
 			//move
 			system("cls");
 			if(hx+nx[r]<=1||hx+nx[r]>=n||hy+ny[r]<=1||hy+ny[r]>=n){
-				printf("ERR-ID:³ö½ç\n");
+				printf("ERR-ID:å‡ºç•Œ\n");
 				continue;
 			}
 			cout<<hx<<hy<<endl;
@@ -187,7 +187,7 @@ int game(){
 				field[hx][hy]=5;
 				field[hx-nx[r]][hy-ny[r]]=0;
 			}
-			printf("³É¹¦\n");
+			printf("æˆåŠŸ\n");
 			Sleep(1);
 			cout<<hx<<hy<<endl;
 			Sleep(5000);
