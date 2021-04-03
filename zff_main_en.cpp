@@ -257,24 +257,24 @@ void maken(){
 int start(){
 	// system("color F0");
 	system("echo $HOME > /tmp/zffuser; clear");
-  //system ("cp -r ~/.local/share/ohzff-zff ./zffcc");
-  getdir();
-  getinit();
-  /*
+  	//system ("cp -r ~/.local/share/ohzff-zff ./zffcc");
+	getdir();
+	getinit();
+  	/*
 	printf("\n\n\n              LanGongINC \n              LanGongDEV \n");
 	sleep(3);
 	system("clear");
 	printf("Welcome\n");
 	*/
-  if (display_log) printf (" >> Starting Zff Game...\n");
-  //printf (" >> Copy config files\n");
-  //system ("cp ")
-  level=getlevel();
-  //if (display_log) sleep (5);
+	if (display_log) printf (" >> Starting Zff Game...\n");
+	//printf (" >> Copy config files\n");
+	//system ("cp ")
+  	level=getlevel();
+  	//if (display_log) sleep (5);
 	//system("clear");
 	//printf("                Zff \n\n\n\n\n\n\n\n\n\n         Welcome!\n");
 	//sleep(3);
-  printlogo();
+  	printlogo();
 	if(level==-1||getboot()!=1){
 		//maken();
     printf ("%s\n", ebox[5]);
@@ -293,7 +293,7 @@ int start(){
 }
 int game(){
 	s=0;
-  char rce[300]="";
+  	char rce[300]="";
 	while(true){
 		if(fx==hx&&fy==hy){
 			return win();
@@ -318,7 +318,7 @@ int game(){
 			cout<<endl;
 		}
 		printf("\n Use 'UP''DOWN''LEFT''RIGHT' to contral 'H' to catch 'F'\n Press 'R' to restart game\n Press 'Q' to quit game\n");
-    MOVETO(1,1);
+    	MOVETO(1,1);
 		int r=check(keyboard());
 		// printf("%d\n",r);
 		// sleep(1);
@@ -345,7 +345,7 @@ int game(){
 			//system("clear");
 			if(hx+nx[r]<=1||hx+nx[r]>n-1||hy+ny[r]<=1||hy+ny[r]>n-1){
 				//printf("%s", ebox[1]);
-        strcpy(rce,ebox[1]);
+        		strcpy(rce,ebox[1]);
 				//sleep(0.1);
 				continue;
 			}
@@ -452,10 +452,10 @@ void start_game(){
 	level=getlevel();
 	fx=n-1,fy=n-1,hx=2,hy=2;
 	field[2][2]=5,field[n-1][n-1]=6;
-  HIDE_CURSOR();
+  	HIDE_CURSOR();
 	if(game()==1)start_game();
-  RESET_CURSOR();
-  SHOW_CURSOR();
+	RESET_CURSOR();
+	SHOW_CURSOR();
 }
 /*
 
@@ -483,62 +483,64 @@ void findpalse(){
 
 void goodbye(){
 	system("clear");
-  SHOW_CURSOR();
-  //system ("rm -rf ~/.local/share/ohzff-zff && mv zffcc ~/.local/share/ohzff-zff");
-  printlogo();
-  printf("\n Exit Zff game.\n");
-  sleep(1);
+	SHOW_CURSOR();
+	//system ("rm -rf ~/.local/share/ohzff-zff && mv zffcc ~/.local/share/ohzff-zff");
+	printlogo();
+	printf("\n Exit Zff game.\n");
+	sleep(1);
+	system("stty echo");
 	system("clear");
 }
 
 void ready ()
 {
-  if(start()){
-    printf("%s", ebox[3]);
-    //return 3;
-    exit(3);
-  }
+	if(start()){
+		printf("%s", ebox[3]);
+		//return 3;
+		system("stty echo");
+		exit(3);
+	}
 }
 
 int main(int argc, char* argv[]){
-  if(argv[1] == NULL)
-  {
-    ready();
-  }
-  else if (strcmp (argv[1], "log") == 0)
-  {
-    display_log = 1;
-    ready();
-  }
-	else if (strcmp(argv[1], "init") == 0)
-  {
-    if (display_log) printf (" >> Waiting 'init.sh'\n");
-    system ("bash /usr/share/ohzff-zff/init.sh || bash ./init.sh");
-    return 0;
-  }
-  else if (strcmp(argv[1], "update") == 0)
-  {
-    //system ("cd /usr/share/ohzff-zff && git pull && g++ zff_main_en.cpp -o /usr/bin/zff");
-    if (display_log) printf (" >> You cannot use this via to update the game. Try to use git\n");
-    return 0;
-  }
-  else if (strcmp(argv[1], "debug") == 0)
-  {
-    //printf ("%d\n", win());
-    if (display_log) printf (" >> Debug mod and exit with %d\n", 6);
-    return 6;
-  }
-  else if (strcmp(argv[1], "license") == 0)
-  {
-    printf (" LanGong OhZff Zff game is undered MIT License.\n\n\n");
-    printf ("MIT License\n\nCopyright (c) 2020 LanGongDEV\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\n  The above copyright notice and this permission notice shall be included in all\n  copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n");
-    return 0;
-  }
-  else
-  {
-    printf ("%s\n", ebox[4]);
-    return 4;
-  }
+	if(argv[1] == NULL)
+	{
+		ready();
+	}
+	else if (strcmp (argv[1], "log") == 0)
+	{
+		display_log = 1;
+		ready();
+	}
+		else if (strcmp(argv[1], "init") == 0)
+	{
+		if (display_log) printf (" >> Waiting 'init.sh'\n");
+		system ("bash /usr/share/ohzff-zff/init.sh || bash ./init.sh");
+		return 0;
+	}
+	else if (strcmp(argv[1], "update") == 0)
+	{
+		//system ("cd /usr/share/ohzff-zff && git pull && g++ zff_main_en.cpp -o /usr/bin/zff");
+		if (display_log) printf (" >> You cannot use this via to update the game. Try to use git\n");
+		return 0;
+	}
+	else if (strcmp(argv[1], "debug") == 0)
+	{
+		//printf ("%d\n", win());
+		if (display_log) printf (" >> Debug mod and exit with %d\n", 6);
+		return 6;
+	}
+	else if (strcmp(argv[1], "license") == 0)
+	{
+		printf (" LanGong OhZff Zff game is undered MIT License.\n\n\n");
+		printf ("MIT License\n\nCopyright (c) 2020 LanGongDEV\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\n  The above copyright notice and this permission notice shall be included in all\n  copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n");
+		return 0;
+	}
+	else
+	{
+		printf ("%s\n", ebox[4]);
+		return 4;
+	}
 	sleep(1);
 	findpalse();
 	goodbye();
